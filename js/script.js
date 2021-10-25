@@ -1,0 +1,71 @@
+{
+  const form = document.querySelector(".form");
+
+  const measureBMI = () => {
+    let unit = document.getElementById("bmi-metric").checked,
+      weight = document.getElementById("bmi-weight"),
+      weightUnit = document.getElementById("bmi-weight-unit"),
+      height = document.getElementById("bmi-height"),
+      heightUnit = document.getElementById("bmi-height-unit");
+
+    if (unit) {
+      weightUnit.innerHTML = "KG";
+      weight.min = 1;
+      heightUnit.innerHTML = "CM";
+      height.min = 54;
+    } else {
+      weightUnit.innerHTML = "LBS";
+      weight.min = 2;
+      heightUnit.innerHTML = "IN";
+      height.min = 21;
+    }
+  };
+
+  const calculateBMI = () => {
+    let bmi = null,
+      unit = document.getElementById("bmi-metric").checked,
+      weight = parseInt(document.getElementById("bmi-weight").value),
+      height = parseInt(document.getElementById("bmi-height").value),
+      results = document.getElementById("bmi-results");
+
+    if (unit) {
+      height = height / 100;
+      bmi = weight / (height * height);
+    } else {
+      bmi = 703 * (weight / (height * height));
+    }
+    bmi = Math.round(bmi * 100) / 100;
+
+    if (bmi < 18.5) {
+      results.innerHTML = bmi + " - Underweight";
+      results.style.color = "crimson";
+    } else if (bmi < 25) {
+      results.innerHTML = bmi + " - Normal weight";
+      results.style.color = "teal";
+    } else if (bmi < 30) {
+      results.innerHTML = bmi + " - Pre-obesity";
+      results.style.color = "crimson";
+    } else if (bmi < 35) {
+      results.innerHTML = bmi + " - Obesity class I";
+      results.style.color = "crimson";
+    } else if (bmi < 40) {
+      results.innerHTML = bmi + " - Obesity class II";
+      results.style.color = "crimson";
+    } else {
+      results.innerHTML = bmi + " - Obesity class III";
+      results.style.color = "crimson";
+    }
+    return false;
+  };
+
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    calculateBMI();
+  };
+
+  const init = () => {
+    form.addEventListener("submit", onFormSubmit);
+  };
+
+  init();
+}

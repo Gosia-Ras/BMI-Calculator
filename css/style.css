@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+.body {
+  max-width: 500px;
+  margin: 0px auto;
+  margin-top: 20px;
+  font-family: "Maven Pro", sans-serif;
+}
+
+.header {
+  background-color: teal;
+  color: aliceblue;
+  text-align: center;
+  padding: 10px;
+}

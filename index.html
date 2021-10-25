@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body class="body">
+    <h1 class="header">Adult BMI Calculator</h1>
+    <form class="form">
+      <label class="form__label">
+        <input
+          class="form__input"
+          type="radio"
+          id="bmi-metric"
+          name="bmi-measure"
+          onchange="measureBMI()"
+          checked
+        />
+        Metric
+      </label>
+      <label class="form__label">
+        <input
+          class="form__input"
+          type="radio"
+          id="bmi-imperial"
+          name="bmi-measure"
+          onchange="measureBMI()"
+        />
+        Imperial
+      </label>
+      <p>Weight</p>
+      <input
+        class="form__input"
+        type="number"
+        id="bmi-weight"
+        min="1"
+        required
+      />
+      <span id="bmi-weight-unit">KG</span>
+      <p>Height</p>
+      <input
+        class="form__input"
+        type="number"
+        id="bmi-height"
+        min="54"
+        required
+      />
+      <span id="bmi-height-unit">CM</span>
+      <div>
+        <button class="form__button" type="submit">Calculate</button>
+      </div>
+      <div class="form__result" id="bmi-results"></div>
+    </form>
+  </body>
+</html>
