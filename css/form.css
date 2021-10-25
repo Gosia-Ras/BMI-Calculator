@@ -17,6 +17,12 @@
   background-color: teal;
   color: aliceblue;
   border: none;
+  transition: transform 1s;
+}
+
+.form__button:hover {
+  background-color: rgb(1, 102, 102);
+  transform: scale(1.1);
 }
 
 .form__result {
