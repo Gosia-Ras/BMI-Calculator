@@ -1,5 +1,21 @@
 # BMI-Calculator
 Simple tool to calculate BMI of an adult
 
-# DEMO: 
+Features
+1. Navigation with links to useful resources about weight management
+2. Calculator with measurements in metric and imperial scale
+3. Table with BMI values - visible upon submitting the form
+
+# DEMO
 https://gosia-ras.github.io/BMI-Calculator/
+
+#Technologies
+
+- semantic HTML
+- CSS
+- EC6+
+- BEM
+
+To-Do
+
+1. add responsiveness to the page
