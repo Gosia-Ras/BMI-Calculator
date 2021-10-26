@@ -11,8 +11,11 @@ https://gosia-ras.github.io/BMI-Calculator/
 
 #Technologies
 
-*semantic HTML
-*CSS
-*EC6+
-*BEM
+- semantic HTML
+- CSS
+- EC6+
+- BEM
 
+To-Do
+
+1. add responsiveness to the page
