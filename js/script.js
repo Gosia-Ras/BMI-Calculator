@@ -1,7 +1,7 @@
 {
   const form = document.querySelector(".form");
 
-  const measureBMI = () => {
+  function measureBMI() {
     let unit = document.getElementById("bmi-metric").checked,
       weight = document.getElementById("bmi-weight"),
       weightUnit = document.getElementById("bmi-weight-unit"),
@@ -19,7 +19,7 @@
       heightUnit.innerHTML = "IN";
       height.min = 21;
     }
-  };
+  }
 
   const calculateBMI = () => {
     let bmi = null,
@@ -58,9 +58,14 @@
     return false;
   };
 
+  const displayTable = () => {
+    document.getElementById("js-container").style.display = "block";
+  };
+
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateBMI();
+    displayTable();
   };
 
   const init = () => {
