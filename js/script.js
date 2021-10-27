@@ -38,22 +38,22 @@
 
     if (bmi < 18.5) {
       results.innerHTML = bmi + " - Underweight";
-      results.style.color = "crimson";
+      results.classList.add("form__result--crimson");
     } else if (bmi < 25) {
       results.innerHTML = bmi + " - Normal weight";
-      results.style.color = "teal";
+      results.classList.add("form__result--teal");
     } else if (bmi < 30) {
       results.innerHTML = bmi + " - Pre-obesity";
-      results.style.color = "crimson";
+      results.classList.add("form__result--crimson");
     } else if (bmi < 35) {
       results.innerHTML = bmi + " - Obesity class I";
-      results.style.color = "crimson";
+      results.classList.add("form__result--crimson");
     } else if (bmi < 40) {
       results.innerHTML = bmi + " - Obesity class II";
-      results.style.color = "crimson";
+      results.classList.add("form__result--crimson");
     } else {
       results.innerHTML = bmi + " - Obesity class III";
-      results.style.color = "crimson";
+      results.classList.add("form__result--crimson");
     }
     return false;
   };

@@ -40,3 +40,11 @@
   max-width: max-content;
   font-weight: 800;
 }
+
+.form__result--crimson {
+  color: crimson;
+}
+
+.form__result--teal {
+  color: teal;
+}
