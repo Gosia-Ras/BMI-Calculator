@@ -59,7 +59,8 @@
   };
 
   const displayTable = () => {
-    document.getElementById("js-container").style.display = "block";
+    const tableContainer = document.getElementById("js-container");
+    tableContainer.classList.remove("tableContainer");
   };
 
   const onFormSubmit = (event) => {

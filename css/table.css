@@ -2,8 +2,12 @@
   display: none;
 }
 
+.tableContainer--visible {
+  display: block;
+}
+
 @media (max-width: 768px) {
-  .tableCnt {
+  .tableContainer {
     overflow-x: auto;
   }
 }
