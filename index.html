@@ -57,25 +57,17 @@
           Use this calculator to check your body mass index (BMI) and find out
           if you're a healthy weight.
         </p>
-        <form class="form">
-          <label class="form__label">
-            <input
-              class="form__input"
-              type="radio"
-              id="bmi-metric"
-              name="bmi-measure"
-              onchange="measureBMI()"
-              checked
-            />
+        <form class="form js-form">
+          <label>
+            <input class="js-metric" type="radio" value="metric" name="units" />
             Metric
           </label>
           <label class="form__label">
             <input
-              class="form__input"
+              class="js-imperial"
               type="radio"
-              id="bmi-imperial"
-              name="bmi-measure"
-              onchange="measureBMI()"
+              value="imperial"
+              name="units"
             />
             Imperial
           </label>
@@ -87,7 +79,7 @@
             min="1"
             required
           />
-          <span id="bmi-weight-unit">KG</span>
+          <span class="js-weightSpan">KG</span>
           <p>Height</p>
           <input
             class="form__input"
@@ -96,7 +88,7 @@
             min="54"
             required
           />
-          <span id="bmi-height-unit">CM</span>
+          <span class="js-heightSpan">CM</span>
           <div>
             <button class="form__button" type="submit">Calculate</button>
           </div>
@@ -139,6 +131,8 @@
         </table>
       </div>
     </div>
-    <footer class="footer">Copyright 2021 by Malgorzata Ras. All rights reserved.</footer>
+    <footer class="footer">
+      Copyright 2021 by Malgorzata Ras. All rights reserved.
+    </footer>
   </body>
 </html>
